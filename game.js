@@ -56,7 +56,7 @@ canvas.addEventListener("mousemove", function(e) {
 		var _j = Math.floor(y / CELL_HEIGHT);
 
 		if (_i != last_i || _j != last_j) {
-			matrix[_i][_j] = !matrix[_i][_j];
+			matrix[_i][_j] = e.ctrlKey ? false : true;
 			last_i = _i;
 			last_j = _j;
 		}
@@ -70,7 +70,7 @@ canvas.addEventListener("mousedown", function(e) {
 	var _i = Math.floor(x / CELL_WIDTH);
 	var _j = Math.floor(y / CELL_HEIGHT);
 
-	matrix[_i][_j] = !matrix[_i][_j];
+	matrix[_i][_j] = e.ctrlKey ? false : true;
 	last_i = _i;
 	last_j = _j;
 	draw();
