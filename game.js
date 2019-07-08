@@ -50,8 +50,8 @@ document.body.addEventListener("keydown", function(e) {
 
 canvas.addEventListener("mousemove", function(e) {
 	if (e.buttons == 1) {
-		var x = e.clientX - e.srcElement.offsetLeft;
-		var y = e.clientY - e.srcElement.offsetTop;
+		var x = e.clientX - e.srcElement.offsetLeft + window.scrollX;
+		var y = e.clientY - e.srcElement.offsetTop + window.scrollY;
 		var _i = Math.floor(x / CELL_WIDTH);
 		var _j = Math.floor(y / CELL_HEIGHT);
 
@@ -65,8 +65,8 @@ canvas.addEventListener("mousemove", function(e) {
 });
 
 canvas.addEventListener("mousedown", function(e) {
-	var x = e.clientX - e.srcElement.offsetLeft;
-	var y = e.clientY - e.srcElement.offsetTop;
+	var x = e.clientX - e.srcElement.offsetLeft + window.scrollX;
+	var y = e.clientY - e.srcElement.offsetTop + window.scrollY;
 	var _i = Math.floor(x / CELL_WIDTH);
 	var _j = Math.floor(y / CELL_HEIGHT);
 
