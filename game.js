@@ -17,9 +17,9 @@ var last_j = null;
 var matrix = initialMatrix();
 
 document.body.addEventListener("keydown", function(e) {
-	e.preventDefault();
 	switch (e.key) {
 		case " ":
+			e.preventDefault();
 			if (running) {
 				running = false;
 			} else {
